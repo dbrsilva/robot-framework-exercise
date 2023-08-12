@@ -165,3 +165,6 @@ results/
 #other files
 *.xml
 .DS_Store
+
+#driver
+Driver/Chrome.app

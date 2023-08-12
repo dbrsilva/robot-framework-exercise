@@ -3,7 +3,6 @@ Library         SeleniumLibrary
 Variables       ../Locators/LoginLocators.py
 Variables       ../TestData/SauceDemoData.py
 
-
 *** Keywords ***
 Input Standard Username
     Input Text    ${LoginUsernameInput}    ${StandardUsername}
