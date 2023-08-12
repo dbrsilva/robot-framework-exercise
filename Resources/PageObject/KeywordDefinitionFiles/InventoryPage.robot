@@ -13,12 +13,9 @@ Go to Inventory Page
     Go To    ${inventory_page_url}
     Wait For Condition    return document.readyState == "complete"    timeout=5
 
-Open burger menu
-    Click Button    ${InventoryBurgerMenuButton}
-
 Open product sort select
     Click Element    ${InventoryProductSortSelect}
 
 Verify Inventory is Visible
     Wait For Condition    return document.readyState == "complete"
-    Element Should Be Visible    ${InventoryContentDiv}    timeout=50
+    Element Should Be Visible    ${InventoryContentDiv}    timeout=5
