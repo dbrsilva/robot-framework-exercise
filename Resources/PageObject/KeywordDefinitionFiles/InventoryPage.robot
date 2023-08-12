@@ -1,6 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Variables       ../Locators/SauceDemoInventoryLocators.py
+Variables       ../Locators/InventoryLocators.py
 Variables       ../TestData/SauceDemoData.py
 
 
