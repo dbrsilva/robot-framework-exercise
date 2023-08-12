@@ -1,15 +1,15 @@
 *** Settings ***
 Library         SeleniumLibrary
-Variables       ../Locators/SauceDemoLoginLocators.py
+Variables       ../Locators/LoginLocators.py
 Variables       ../TestData/SauceDemoData.py
 
 
 *** Keywords ***
 Input Standard Username
-    Input Text    ${LoginUsernameInputText}    ${StandardUsername}
+    Input Text    ${LoginUsernameInputInput}    ${StandardUsername}
 
 Input Standard Password
-    Input Password    ${LoginPasswordInputText}    ${StandardPassword}
+    Input Password    ${LoginPasswordInputInput}    ${StandardPassword}
 
 Click Login
     Click Button    ${LoginSubmitButton}
