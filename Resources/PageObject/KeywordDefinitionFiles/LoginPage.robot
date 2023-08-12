@@ -6,10 +6,10 @@ Variables       ../TestData/SauceDemoData.py
 
 *** Keywords ***
 Input Standard Username
-    Input Text    ${LoginUsernameInputInput}    ${StandardUsername}
+    Input Text    ${LoginUsernameInput}    ${StandardUsername}
 
 Input Standard Password
-    Input Password    ${LoginPasswordInputInput}    ${StandardPassword}
+    Input Password    ${LoginPasswordInput}    ${StandardPassword}
 
 Click Login
     Click Button    ${LoginSubmitButton}

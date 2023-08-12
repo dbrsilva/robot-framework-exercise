@@ -12,7 +12,7 @@ ${browser}      Chrome
 
 
 *** Test Cases ***
-Login as a Standad User
+Log in as a Standard User
     Opening Browser    ${site_url}    ${browser}
     Input Standard Username
     Input Standard Password
