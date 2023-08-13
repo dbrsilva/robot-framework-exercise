@@ -7,7 +7,7 @@ Variables       ../TestData/ApiData.py
 
 *** Keywords ***
 Create a HTTP session
-    Create Session    my_session    ${ApiRRequestURL}
+    Create Session    my_session    ${ApiRRequestURL}    verify=true
 
 Get house name as String
     [Arguments]    ${response}

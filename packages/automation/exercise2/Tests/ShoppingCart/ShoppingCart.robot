@@ -6,6 +6,7 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryP
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/ShoppingCartPage.robot
 
 Test Setup          Login as a Standard User
+Test Teardown       Close Browser
 
 
 *** Test Cases ***

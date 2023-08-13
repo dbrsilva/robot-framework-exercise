@@ -6,6 +6,7 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Common.rob
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryPage.robot
 
 Test Setup          Login as a Standard User
+Test Teardown       Close Browser
 
 
 *** Variables ***

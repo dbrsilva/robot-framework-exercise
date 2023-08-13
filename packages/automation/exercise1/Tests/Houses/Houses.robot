@@ -3,9 +3,11 @@ Documentation       Game of Thrones houses validation using Robot Framework
 
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/HousesRequests.robot
 
+Test Teardown       Delete All Sessions
+
 
 *** Test Cases ***
-My first test case
+Exercise 1 - Get Request Dorne House
     @{expected_house_names} =    Create List    House Allyrion of Godsgrace
     ...    House Blackmont of Blackmont
     ...    House Briar
