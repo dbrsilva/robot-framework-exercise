@@ -18,8 +18,10 @@ Opening All Items Burger Menu option
     Wait Until Element Is Visible    ${InventoryContainerDiv}    timeout=5
 
 Logout
+    Opening Burger Menu
     Wait Until Element Is Visible    ${BurgerMenuLogoutLink}    timeout=5
     Click Link    ${BurgerMenuLogoutLink}
+    Verify that the user is logged out
 
 Verify that the user is logged out
     Page Should Contain Element    ${LoginContainerDiv}
