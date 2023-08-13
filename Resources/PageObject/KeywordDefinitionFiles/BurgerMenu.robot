@@ -2,6 +2,7 @@
 Library         SeleniumLibrary
 Variables       ../Locators/BurgerMenuLocators.py
 Variables       ../Locators/InventoryLocators.py
+Variables       ../Locators/LoginLocators.py
 
 
 *** Keywords ***
@@ -15,3 +16,11 @@ Opening All Items Burger Menu option
     Wait Until Element Is Visible    ${BurgerMenuAllItemsLink}    timeout=5
     Click Element    ${BurgerMenuAllItemsLink}
     Wait Until Element Is Visible    ${InventoryContainerDiv}    timeout=5
+
+Logout
+    Wait Until Element Is Visible    ${BurgerMenuLogoutLink}    timeout=5
+    Click Link    ${BurgerMenuLogoutLink}
+
+Verify that the user is logged out
+    Page Should Contain Element    ${LoginContainerDiv}
+

@@ -111,3 +111,9 @@ Verify that Shopping Cart has the correct product quantities
 Verify that shopping cart has "${items_count}" items
     Wait Until Element Is Visible    ${ShoppingCartContentsContainerDiv}    timeout=5
     Page Should Contain Element    ${ShoppingCartContentItemsList}    limit=${items_count}
+
+Remove item "${item_name}" from the cart
+    ${item_id_tmp} =    Evaluate    '${item_name}'.replace(' ','-').lower()
+    ${item_id} =    Set Variable    id=remove-${item_id_tmp}
+    Wait Until Element Is Visible    ${item_id}    timeout=5
+    Click Button    ${item_id}
