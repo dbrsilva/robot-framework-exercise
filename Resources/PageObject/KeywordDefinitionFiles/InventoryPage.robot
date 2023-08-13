@@ -49,4 +49,4 @@ Select Sort Price Low to High Option
 
 Verify Inventory is Visible
     Wait For Condition    return document.readyState == "complete"
-    Element Should Be Visible    ${InventoryContentDiv}    timeout=5
+    Element Should Be Visible    ${InventoryContainerDiv}    timeout=5
