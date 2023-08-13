@@ -19,7 +19,6 @@ Verify that Shopping Cart has 1 item
     Go to Shopping Cart page
     Verify that shopping cart has "1" items
 
-
 Verify that Shopping Cart has 2 items
     Go to Inventory Page
     Add item "Sauce Labs Backpack" to the cart

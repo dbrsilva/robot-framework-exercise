@@ -6,7 +6,7 @@ Variables       ../Locators/InventoryLocators.py
 
 
 *** Variables ***
-${shopping_cart_page_url}     https://www.saucedemo.com/cart.html
+${shopping_cart_page_url}       https://www.saucedemo.com/cart.html
 
 
 *** Keywords ***
@@ -15,7 +15,7 @@ Open Shopping Cart page
     Click Link    ${ShoppingCartLink}
 
 Go to Shopping Cart page
-    Log   ${shopping_cart_page_url}
+    Log    ${shopping_cart_page_url}
     Go To    ${shopping_cart_page_url}
 
 Add item "${item_name}" to the cart
@@ -26,4 +26,4 @@ Add item "${item_name}" to the cart
 
 Verify that shopping cart has "${items_count}" items
     Wait Until Element Is Visible    ${ShoppingCartContentsContainerDiv}    timeout=5
-    Page Should Contain Element    ${ShoppingCartContentItemsList}   limit=${items_count}
+    Page Should Contain Element    ${ShoppingCartContentItemsList}    limit=${items_count}

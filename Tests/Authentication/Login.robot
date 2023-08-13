@@ -5,6 +5,7 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/LoginPage.
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryPage.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Common.robot
 
+
 *** Test Cases ***
 Log in as a Standard User
     Opening Browser
