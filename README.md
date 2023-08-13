@@ -13,7 +13,9 @@ There are some dependencies that are needed for this project to be executed. As 
 - Python 3.11.4
 
 The exercises can be found in `Tests/ExerciseSauceDemo/Exercise1.robot` and `Tests/ExerciseSauceDemo/Exercise2.robot`. To execute the exercise do the following:
-1. Open `cmd`.
-2. Go to the root of the project folder.
-3. Run `robot -d results Tests/ExerciseSauceDemo/` to execute the exercise.
-4. Verify the report on `./results`
+1. After installing the dependencies.
+2. Open `cmd`.
+3. Run `git clone git@github.com:dbrsilva/robot-framework-exercise.git`.
+5. Go to the root of the project folder.
+6. Run `robot -d results Tests/ExerciseSauceDemo/` to execute the exercise.
+7. Verify the report on `./results`
