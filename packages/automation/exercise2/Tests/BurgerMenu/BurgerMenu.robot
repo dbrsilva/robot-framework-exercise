@@ -5,6 +5,7 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Common.rob
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/BurgerMenu.robot
 
 Test Setup          Login as a Standard User
+Test Teardown       Close Browser
 
 
 *** Test Cases ***
