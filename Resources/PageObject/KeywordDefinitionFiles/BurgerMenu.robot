@@ -1,6 +1,6 @@
 *** Settings ***
 Library         SeleniumLibrary
-Variables       ../Locators/BurgerMenuLocator.py
+Variables       ../Locators/BurgerMenuLocators.py
 Variables       ../Locators/InventoryLocators.py
 
 
