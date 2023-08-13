@@ -5,6 +5,8 @@ There are some dependencies that are needed for this project to be executed. As 
 - SeleniumLibrary
 - Collections
 - String
+- RequestsLibrary
+- JSONLibrary
 
 **Packages:**
 - robotframework
