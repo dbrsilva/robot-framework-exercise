@@ -1,0 +1,1 @@
+ApiRRequestURL = 'https://www.anapioficeandfire.com/api/'
