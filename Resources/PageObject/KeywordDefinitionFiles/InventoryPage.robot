@@ -1,6 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Library         Collections
+Resource        ./Common.robot
 Variables       ../Locators/InventoryLocators.py
 Variables       ../TestData/SauceDemoData.py
 
@@ -15,27 +16,15 @@ Go to Inventory Page
     Wait For Condition    return document.readyState == "complete"    timeout=5
 
 Get Product Names List
-    ${product_names_list} =    Get WebElements    ${InventoryProductNamesList}
-    @{actual_product_names_list} =    Create List
-    FOR    ${item}    IN    @{product_names_list}
-        Append To List    ${actual_product_names_list}    ${item.text}
-    END
-    RETURN    ${actual_product_names_list}
+    @{name_list}    Get Web Element String List    ${InventoryProductNamesList}
+    RETURN    @{name_list}
 
 Get Product Prices List
-    ${product_prices_list} =    Get WebElements    ${InventoryProductPricesList}
-    @{actual_product_prices_list} =    Create List
-    FOR    ${item}    IN    @{product_prices_list}
-        Append To List    ${actual_product_prices_list}    ${item.text}
-    END
-    RETURN    ${actual_product_prices_list}
+    @{price_list}    Get Web Element String List    ${InventoryProductPricesList}
+    RETURN    ${price_list}
 
 Open product sort select
     Click Element    ${InventoryProductSortSelect}
-
-Verify Inventory is Visible
-    Wait For Condition    return document.readyState == "complete"
-    Element Should Be Visible    ${InventoryContentDiv}    timeout=5
 
 Select Sort A to Z Option
     Go to Inventory Page
@@ -57,3 +46,7 @@ Select Sort Price Low to High Option
     Click Element    ${InventoryProductSortSelect}
     Wait Until Element Is Visible    ${InventoryProductSortLowHighOption}    timeout=5
     Click Element    ${InventoryProductSortLowHighOption}
+
+Verify Inventory is Visible
+    Wait For Condition    return document.readyState == "complete"
+    Element Should Be Visible    ${InventoryContentDiv}    timeout=5

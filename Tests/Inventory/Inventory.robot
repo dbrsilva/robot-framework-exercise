@@ -37,12 +37,12 @@ Test Setup          Login as a Standard User
 *** Test Cases ***
 Sort products as ascending A to Z order
     Select Sort A to Z Option
-    ${actual_product_names_list} =    Get Product Names List
+    @{actual_product_names_list} =    Get Product Names List
     Lists Should Be Equal    ${product_sort_az_name_expected_result}    ${actual_product_names_list}
 
 Sort products as ascending High to Low order
     Select Sort Price High to Low Option
-    ${actual_product_prices_list} =    Get Product Prices List
+    @{actual_product_prices_list} =    Get Product Prices List
     Lists Should Be Equal    ${product_sort_high_to_low_price_expected_result}    ${actual_product_prices_list}
 
 Sort products as ascending Low to High order
