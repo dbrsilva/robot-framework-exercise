@@ -10,3 +10,8 @@ Test Setup          Login as a Standard User
 *** Test Cases ***
 Open All Items menu option
     Opening All Items Burger Menu option
+
+Logout
+    Opening Burger Menu
+    Logout
+    Verify that the user is logged out
