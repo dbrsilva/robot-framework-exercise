@@ -37,6 +37,9 @@ Buy 2 items
     Add item "Test.allTheThings() T-Shirt (Red)" to the cart
     Go to Shopping Cart page
     Verify that shopping cart has "2" items
+    Verify that Shopping Cart has the correct product names    ${expected_product_list_name}
+    Verify that Shopping Cart has the correct product prices    ${expected_product_list_price}
+    Verify that Shopping Cart has the correct product quantities    ${expected_product_list_quantity}
     Start Checkout process
     Fill out Checkout form    Debora    Silva    1111
     Continue Checkout process
