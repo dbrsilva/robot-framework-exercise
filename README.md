@@ -16,3 +16,4 @@ The exercises can be found in `Tests/ExerciseSauceDemo/Exercise1.robot` and `Tes
 1. Open `cmd`.
 2. Go to the root of the project folder.
 3. Run `robot -d results Tests/ExerciseSauceDemo/` to execute the exercise.
+4. Verify the report on `./results`
