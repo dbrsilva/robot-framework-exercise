@@ -7,6 +7,8 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryP
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/BurgerMenu.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/ShoppingCartPage.robot
 
+Test Teardown       Close Browser
+
 
 *** Test Cases ***
 Automate using Robot Framework and Selenium Library the following scenario
@@ -40,5 +42,3 @@ Automate using Robot Framework and Selenium Library the following scenario
     Verify Thank You message    Thank you for your order!
     Go Back Home
     Logout
-
-
