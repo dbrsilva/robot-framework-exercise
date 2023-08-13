@@ -67,7 +67,7 @@ Go to Shopping Cart page
 Go Back Home
     Wait Until Element Is Visible    ${CheckoutCompleteBackHomeButton}    timeout=5
     Click Element    ${CheckoutCompleteBackHomeButton}
-    Wait Until Element Is Visible    ${InventoryContainerDiv}
+    Wait Until Element Is Visible    ${InventoryContainerDiv}    timeout=5
 
 Open Shopping Cart page
     Wait Until Element Is Visible    ${ShoppingCartLink}    timeout=5
