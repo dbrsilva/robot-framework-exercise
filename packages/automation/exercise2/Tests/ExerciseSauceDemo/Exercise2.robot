@@ -6,6 +6,9 @@ Resource            ../../Resources/PageObject/KeywordDefinitionFiles/LoginPage.
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryPage.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/BurgerMenu.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/ShoppingCartPage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutInfoPage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutOverviewPage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutCompletePage.robot
 
 Test Teardown       Close Browser
 

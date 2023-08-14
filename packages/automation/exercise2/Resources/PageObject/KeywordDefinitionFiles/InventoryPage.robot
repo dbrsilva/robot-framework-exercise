@@ -11,6 +11,12 @@ ${inventory_page_url}       https://www.saucedemo.com/inventory.html
 
 
 *** Keywords ***
+Add item "${item_name}" to the cart
+    ${item_id_tmp} =    Evaluate    '${item_name}'.replace(' ','-').lower()
+    ${item_id} =    Set Variable    id=add-to-cart-${item_id_tmp}
+    Wait Until Element Is Visible    ${item_id}    timeout=5
+    Click Button    ${item_id}
+
 Go to Inventory Page
     Go To    ${inventory_page_url}
     Wait For Condition    return document.readyState == "complete"    timeout=5
