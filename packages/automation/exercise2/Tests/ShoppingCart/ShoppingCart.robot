@@ -4,6 +4,10 @@ Documentation       Shopping Cart Validation using Robot Framework
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/Common.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/InventoryPage.robot
 Resource            ../../Resources/PageObject/KeywordDefinitionFiles/ShoppingCartPage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutCompletePage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutInfoPage.robot
+Resource            ../../Resources/PageObject/KeywordDefinitionFiles/CheckoutOverviewPage.robot
+
 
 Test Setup          Login as a Standard User
 Test Teardown       Close Browser
