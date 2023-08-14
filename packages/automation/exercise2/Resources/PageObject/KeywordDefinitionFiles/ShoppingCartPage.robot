@@ -12,16 +12,6 @@ ${shopping_cart_page_url}       https://www.saucedemo.com/cart.html
 
 
 *** Keywords ***
-Add item "${item_name}" to the cart
-    ${item_id_tmp} =    Evaluate    '${item_name}'.replace(' ','-').lower()
-    ${item_id} =    Set Variable    id=add-to-cart-${item_id_tmp}
-    Wait Until Element Is Visible    ${item_id}    timeout=5
-    Click Button    ${item_id}
-
-Start Checkout process
-    Wait Until Element Is Visible    ${CheckoutButton}    timeout=5
-    Click Button    ${CheckoutButton}
-
 Get Shopping Cart Product Names List
     @{product_names_list} =    Get Web Element String List    ${ShoppingCartProductNamesList}
     RETURN    ${product_names_list}
@@ -41,6 +31,16 @@ Open Shopping Cart page
     Wait Until Element Is Visible    ${ShoppingCartLink}    timeout=5
     Click Link    ${ShoppingCartLink}
 
+Remove item "${item_name}" from the cart
+    ${item_id_tmp} =    Evaluate    '${item_name}'.replace(' ','-').lower()
+    ${item_id} =    Set Variable    id=remove-${item_id_tmp}
+    Wait Until Element Is Visible    ${item_id}    timeout=5
+    Click Button    ${item_id}
+
+Start Checkout process
+    Wait Until Element Is Visible    ${CheckoutButton}    timeout=5
+    Click Button    ${CheckoutButton}
+
 Verify that Shopping Cart has the correct product names
     [Arguments]    ${expected_product_names_list}
     @{actual_product_names_list} =    Get Shopping Cart Product Names List
@@ -59,9 +59,3 @@ Verify that Shopping Cart has the correct product quantities
 Verify that shopping cart has "${items_count}" items
     Wait Until Element Is Visible    ${ShoppingCartContentsContainerDiv}    timeout=5
     Page Should Contain Element    ${ShoppingCartContentItemsList}    limit=${items_count}
-
-Remove item "${item_name}" from the cart
-    ${item_id_tmp} =    Evaluate    '${item_name}'.replace(' ','-').lower()
-    ${item_id} =    Set Variable    id=remove-${item_id_tmp}
-    Wait Until Element Is Visible    ${item_id}    timeout=5
-    Click Button    ${item_id}
